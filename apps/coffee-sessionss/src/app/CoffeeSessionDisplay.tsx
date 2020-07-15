@@ -15,8 +15,8 @@ export const CoffeeSessionDisplay = (props: any) => (
         maxHeight={300}
         key={c}
       >
-        <Text color="white">{c.one} & </Text>{' '}
-        <Text color="white" key={c}>
+        <Text color="textSecondary">{c.one} & </Text>
+        <Text color="textSecondary" key={c}>
           {c.two}
         </Text>
       </Card>

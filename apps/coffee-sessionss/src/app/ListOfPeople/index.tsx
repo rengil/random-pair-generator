@@ -7,7 +7,7 @@ export const ListOfPeople = ({ people }: any) => (
     <ul>
       {people.map((p: string) => (
         <li key={p}>
-          <Text>{p}</Text>
+          <Text variant="p">{p}</Text>
         </li>
       ))}
     </ul>

@@ -1,5 +1,6 @@
-import React from 'react';
+import React from "react";
+import styled from 'styled-components';
 
-import { Card as CardRebass } from 'rebass';
+import { Card as CardUi } from "@material-ui/core";
 
-export const Card = (props: any) => <CardRebass {...props} />;
+export const Card = (props: any) => <CardUi {...props} />;

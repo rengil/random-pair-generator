@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Label, Input } from '@rebass/forms';
+import TextField from '@material-ui/core/TextField';
 
 import { Flex, Box } from '../components/box';
 import { Card } from '../components/card';
 import { Text } from '../components/typographies';
 import { Button } from '../components/button';
+import { Input } from '../components/input';
 
 const t = (c: string) => {
   const translations = {
@@ -26,15 +27,11 @@ export const AddPersonCard = ({ onAdd }: any) => {
         setName('');
       }}
     >
-      <Flex justifyContent="center" flex={1} mt={6}>
-        <Card style={{ border: '1px solid black' }} p={2} width={256}>
-          <Text fontSize={4}>{t('title')}</Text>
+       <Text variant="h1">{t('title')}</Text>
           <Box marginTop={2}>
             <Box>
-              <Box mb={2}>
-                <Label htmlFor="email">Participant</Label>
-              </Box>
-              <Input
+              <Input 
+                label="Participant"
                 onChange={(e: any) => setName(e?.target?.value)}
                 value={name}
                 id="name"
@@ -47,8 +44,7 @@ export const AddPersonCard = ({ onAdd }: any) => {
           <Box marginTop={4}>
             <Button variant="primary">{t('caption')}</Button>
           </Box>
-        </Card>
-      </Flex>
+
     </Box>
   );
 };

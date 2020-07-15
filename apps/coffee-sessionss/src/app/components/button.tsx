@@ -1,5 +1,15 @@
-import React from 'react';
+import styled from 'styled-components';
+import {
+  compose,
+  flexbox as Flex,
+  borders,
+  PaletteProps,
+  spacing,
+  positions,
+  typography,
+  TypographyProps,
+} from '@material-ui/system'
 
-import { Button as ButtonRebass } from 'rebass';
+const Button = styled('button')(compose(spacing, positions, borders));
 
-export const Button = (props: any) => <ButtonRebass {...props} />;
+export { Button }
