@@ -47,9 +47,9 @@ function App() {
   const [coffeeSession, setCoffeeSession] = useState([]) as any;
 
   const handleAdd = (person: string) => {
-    if (!people.includes(person)) {
+    if(person && person.trim() !== '' && !people.includes(person)) {
       setPeople([...people, person]);
-    }
+   }
   };
 
   const clearList = () => setPeople([])

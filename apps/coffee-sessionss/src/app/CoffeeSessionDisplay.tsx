@@ -17,7 +17,7 @@ export const CoffeeSessionDisplay = (props: any) => (
       <FlexCol alignItems="center" justifyContent="space-around" height="4rem" mt="1rem" p="0.5rem" border="1px solid black" bgcolor="secondary.main" >
         <Text  style={{ color: 'white' }}>{randomEmoji()}</Text>
         <Text  style={{ color: 'white' }}>{c.one} </Text>
-        <Text  style={{ color: 'white' }}>AD</Text>
+        <Text  style={{ color: 'white' }}>&</Text>
         <Text  style={{ color: 'white' }} key={c}>
           {c.two}
         </Text>
