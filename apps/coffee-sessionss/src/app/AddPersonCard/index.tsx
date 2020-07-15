@@ -58,7 +58,7 @@ export const AddPersonCard = ({ onAdd }: any) => {
             </Box>
           </Box>
           <Box marginTop={4}>
-            <Button disableRipple variant="primary">{t('caption')}</Button>
+            <Button type="submit" disableRipple variant="primary">{t('caption')}</Button>
           </Box>
      </FlexCol>
     </FlexCol>
