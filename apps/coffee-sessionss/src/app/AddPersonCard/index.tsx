@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import TextField from '@material-ui/core/TextField';
-
-import { Flex, Box } from '../components/box';
-import { Card } from '../components/card';
+import { FlexCol , Box } from '../components/box';
 import { Text } from '../components/typographies';
 import { Button } from '../components/button';
 import { Input } from '../components/input';
@@ -10,41 +7,60 @@ import { Input } from '../components/input';
 const t = (c: string) => {
   const translations = {
     caption: 'Add',
-    title: 'Select a participant to be consider in the draw',
+    title: 'Coffee Attendants',
+    description: 'The participant, together with others, will be sorted in pairs to attend the coffee',
   } as any;
 
   return translations[c];
 };
 
 export const AddPersonCard = ({ onAdd }: any) => {
-  const [name, setName] = useState();
+  const [name, setName] = useState() as any;
   return (
-    <Box
+    <FlexCol
+    width="500px"
+    alignItems="center"
+    border="1px solid black"
+    onSubmit={(e: any) => {
+      e.preventDefault();
+      onAdd(name);
+      setName('');
+    }}
+  >
+    <FlexCol
+      width="420px"
+      p="2rem"
+      alignItems="flex-start"
       as="form"
+      b="1"
+      borderLeft="16px solid black"
       onSubmit={(e: any) => {
         e.preventDefault();
         onAdd(name);
         setName('');
       }}
     >
-       <Text variant="h1">{t('title')}</Text>
+       <Text variant="h2">{t('title')}</Text>
+       <Text mt="0.5rem" variant="p">{t('description')}</Text>
           <Box marginTop={2}>
             <Box>
               <Input 
-                label="Participant"
+
+                disableUnderline={true} 
+                disableAnimation
                 onChange={(e: any) => setName(e?.target?.value)}
                 value={name}
                 id="name"
                 name="name"
                 type="text"
-                placeholder="Will take in place in withdraw"
+                placeholder="Participant"
               />
             </Box>
           </Box>
           <Box marginTop={4}>
-            <Button variant="primary">{t('caption')}</Button>
+            <Button disableRipple variant="primary">{t('caption')}</Button>
           </Box>
-
-    </Box>
+     </FlexCol>
+    </FlexCol>
   );
 };

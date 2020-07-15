@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
-import { style, typography } from '@material-ui/system';
+import { style, typography, spacing } from '@material-ui/system';
 
 const variant = style({
   prop: 'variant',
@@ -10,7 +10,9 @@ const variant = style({
 
 const Text = styled.span`
   font-family: Helvetica;
+  ${spacing}
   ${variant}
+  
   ${typography}
 `;
 
