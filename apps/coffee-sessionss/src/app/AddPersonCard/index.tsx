@@ -3,7 +3,9 @@ import { FlexCol, Box } from '../components/box';
 import { Text } from '../components/typographies';
 import { Button } from '../components/button';
 import { Input } from '../components/input';
-import { translate } from '../../translations/zu';
+import zu from '../../translations/zu.json';
+
+export const translate = (key) => _.get(zu, key);
 
 const t = (c: string) => {
   const translations = {
