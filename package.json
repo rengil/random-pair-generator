@@ -28,13 +28,16 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "deep-object-diff": "^1.1.0",
     "document-register-element": "1.13.1",
     "emotion-theming": "^10.0.27",
     "lodash": "^4.17.20",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.1",
-    "react-router-dom": "5.2.0"
+    "react-dropzone": "^11.2.4",
+    "react-json-view": "^1.19.1",
+    "react-router-dom": "5.2.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.9.6",
@@ -53,6 +56,7 @@
     "@types/node": "~8.9.4",
     "@types/react": "16.9.38",
     "@types/react-dom": "16.9.8",
+    "@types/react-router-dom": "5.1.5",
     "@typescript-eslint/eslint-plugin": "2.19.2",
     "@typescript-eslint/parser": "2.19.2",
     "babel-jest": "25.1.0",
@@ -70,7 +74,6 @@
     "ts-jest": "25.2.1",
     "ts-node": "~7.0.0",
     "tslint": "~6.0.0",
-    "typescript": "~3.8.3",
-    "@types/react-router-dom": "5.1.5"
+    "typescript": "~3.8.3"
   }
 }
