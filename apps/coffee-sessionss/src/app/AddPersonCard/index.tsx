@@ -3,7 +3,7 @@ import { FlexCol, Box } from '../components/box';
 import { Text } from '../components/typographies';
 import { Button } from '../components/button';
 import { Input } from '../components/input';
-import { translate } from '../../zu';
+import { translate } from '../../translations/zu';
 
 const t = (c: string) => {
   const translations = {
