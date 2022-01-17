@@ -43,7 +43,7 @@ const theme = {
 };
 
 function App() {
-  const [people, setPeople] = useState(["Renan", "Flavia", "Abra", "Goku"]) as any;
+  const [people, setPeople] = useState(["Vitor", "Veselin", "Janda"]) as any;
   const [coffeeSession, setCoffeeSession] = useState([]) as any;
 
   const handleAdd = (person: string) => {
